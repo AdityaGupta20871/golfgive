@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --forest: #1a2e1a;
+  --forest-light: #243824;
+  --forest-muted: #2d4a2d;
+  --gold: #c9a84c;
+  --gold-light: #dfc06a;
+  --gold-muted: #a8883a;
+  --cream: #f5f0e8;
+  --cream-muted: #e8e0d0;
+  --bg-dark: #0d1a0d;
+  --bg-card: #162216;
+  --text-primary: #f5f0e8;
+  --text-muted: #a0b0a0;
+}
+
+@theme inline {
+  --color-forest: var(--forest);
+  --color-forest-light: var(--forest-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-cream: var(--cream);
+  --color-bg-dark: var(--bg-dark);
+  --color-bg-card: var(--bg-card);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--forest);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--gold-muted);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--gold);
+  color: var(--forest);
+}
